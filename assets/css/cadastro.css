@@ -1,0 +1,157 @@
+html body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    background: rgb(221, 220, 220);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* contéudo 
+------------------------------------------------------*/
+.conteudo {
+    background: white;
+    grid-area:"card1";
+    padding: 1em;
+    /* border: 1px solid red; */
+    border-radius: 0.5em;
+    height: 70vh;
+    width:  50vw;
+}
+
+.input-noticia {
+    width: 80%;
+    padding: 0.5em;
+    margin-bottom: 2em;
+}
+
+.textarea-noticia {
+    width: 80%;
+    padding: 0.5em;
+    height: 30vh;
+    resize: none;
+}
+
+#btn-cadastrar {
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
+    border:none;
+    background:rgb(172, 171, 169);
+    width: 30%;
+}
+
+#btn-cadastrar:hover {
+    transition: 1s;
+    color:white;
+    background: black;
+}
+
+.btn-acessar {
+  width: 70%; 
+  padding: 0.6em;
+  background: rgb(172, 171, 169);
+  border-radius: 0.5em;
+  border:none;  
+}
+
+.btn-acessar:hover {
+    background: black;
+    color:white;
+}
+
+.container {
+    /* border: 1px solid red; */
+    display: grid;  
+    grid-template-areas:"card1";
+    max-width: 1200px;
+    justify-content: center;
+    margin:0 auto;
+    padding-bottom: 5em;
+}
+
+@media (max-width: 575.98px ) { 
+    .conteudo{
+        width: 80vw;
+    }
+
+    /* nav 
+    ---------------------------*/
+    nav ul {
+        /* border: 1px solid blue; */
+        width: 80vw;
+        /* o flex container deixa de ser em linha para ser em colunas
+        "elementos um a baixo do outro" */
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    ul li {
+        margin: 0.2em;
+        font-size: 0.8em;
+    }
+    /* exibe o butao da navbar resposiva */
+    .btn-toggle {
+        display: block;
+    }
+
+    header {
+        padding: 0.8em 0;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px ) {
+    .card {
+        width: 90vw;
+    } 
+
+    /* nav 
+    ----------------------------------------*/
+    nav ul {
+        border: 1px solid blue;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    ul li {
+        margin: 0.2em;
+        font-size: 0.8em;
+    }
+    
+    .btn-toggle {
+        display: block;
+    }
+
+    header {
+        padding: 0.8em 0;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    
+    .card {
+        width: 80vw;
+    } 
+}
+
+@media (min-width: 992px) {
+    .card{
+        width: 20vw;
+    }
+    nav{
+        display: flex;
+    }
+}
+    
