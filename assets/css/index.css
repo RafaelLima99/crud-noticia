@@ -1,0 +1,166 @@
+/* contéudo 
+------------------------------------------------------*/
+.card {
+    background: white;
+    grid-area:"card1";
+    padding: 1em;
+    /* border: 1px solid red; */
+    border-radius: 0.5em;
+    height: 50vh;
+    width:  20vw;
+    /* para quebrar o texto dentro da div */
+    word-wrap: break-word;
+    /* para o botao ficar a baixo do card */
+    position: relative;
+    
+}
+
+/* container do .btn-acessar */
+.btn-container {
+    position: absolute;
+    bottom: 0;
+    /* border: 1px solid blue;  */
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding-bottom: 1em;
+}
+
+.btn-acessar {
+  width: 70%; 
+  padding: 0.6em;
+  background: rgb(172, 171, 169);
+  border-radius: 0.5em;
+  border:none;  
+}
+
+.btn-acessar:hover {
+    background: black;
+    color:white;
+}
+
+.btn-acessar:hover {
+    box-shadow: 10em;
+    
+}
+
+.container {
+    /* border: 1px solid red; */
+    display: grid;  
+    grid-gap:1.5em;
+    max-width: 1200px;
+    justify-content: center;
+    /* para o rodapé n ficar em cima dos cards da segunda linha */
+    padding-bottom: 10em;
+    
+}
+
+@media (max-width: 575.98px ) { 
+    .container {
+        grid-template-areas:"card1";
+       
+    }
+
+    .card {
+        width: 80vw;
+    }
+
+    /* nav 
+    ---------------------------*/
+    nav ul {
+        /* border: 1px solid blue; */
+        width: 80vw;
+        /* o flex container deixa de ser em linha para ser em colunas
+        "elementos um a baixo do outro" */
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    ul li {
+        margin: 0.2em;
+        font-size: 0.8em;
+    }
+
+    /* exibe o butao da navbar resposiva */
+    .btn-toggle {
+        display: block;
+    }
+
+    header {
+        padding: 0.8em 0;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px ) {
+    .container {
+        grid-template-areas: "card1 card1";
+       
+    }
+
+    .card {
+        width: 40vw;
+    } 
+
+    /* nav 
+    ----------------------------------------*/
+    nav ul {
+        border: 1px solid blue;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    ul li {
+        margin: 0.2em;
+        font-size: 0.8em;
+    }
+    
+    .btn-toggle {
+        display: block;
+    }
+
+    header {
+        padding: 0.8em 0;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .container {
+        grid-template-areas: "card1 card1";
+        /* para o container ficar centralizada */
+        margin:0 auto;
+    }
+
+    .card {
+        width: 40vw;
+    } 
+}
+
+@media (min-width: 992px) {
+    .container {
+        grid-template-areas: "card1 card1 card1" ;
+        /* para o container ficar centralizada */
+        margin:0 auto;
+    }
+
+    .card {
+        width: 20vw;
+    }
+    
+    nav {
+        display: flex;
+    }
+}
+    
