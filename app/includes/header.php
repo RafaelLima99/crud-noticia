@@ -7,8 +7,9 @@
         </button>
         <nav id="nav" >
             <ul>
-                <li><a href="cadastro.php">CADASTRAR NOTÍCIAS</a></li>
-                <li><a href="index.php">EXÍBIR NOTÍCIAS</a></li>  
+                <li><a href="cadastro-noticia.php">CADASTRAR NOTÍCIAS</a></li>
+                <li><a href="index.php">EXÍBIR NOTÍCIAS</a></li>
+                <li><a href="cadastro-categoria.php">CADASTRAR CATEGORIA</a></li>  
                 <form action="index.php" method="GET">
                     <input id="input-busca" type="text" name="busca" placeholder="pesquisar por titulo">
                     <button id="btn-search"type="submit">
