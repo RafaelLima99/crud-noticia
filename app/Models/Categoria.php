@@ -16,6 +16,14 @@ class Categoria extends Conexao
         return true;
     }
 
+    public function selectCategorias()
+    {
+        $query = "SELECT *FROM categoria";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     public function setNome($nome)
     {
         $this->nome = $nome;
