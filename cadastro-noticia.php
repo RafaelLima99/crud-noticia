@@ -2,6 +2,7 @@
     require_once "app/Controllers/NoticiaController.php";
     $controller = new NoticiaController();
     $controller->cadastro();
+    $categorias = $controller->categoria();
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +20,14 @@
     <div class="container">
         <div class="conteudo">
             <h3>Cadastro de Notícias</h3>
-            <form method="POST" action="cadastro.php">
+            <form method="POST" action="cadastro-noticia.php">
                 <input class="input-noticia" type="text" placeholder="Título da notícia" name="titulo">
-                <input class="input-noticia" type="text" placeholder="Categoria da notícia" name="categoria">
+                <select class="input-noticia" name="categoria">
+                <?php foreach ($categorias as $categoria) {?>
+                    <option value="102"><?= $categoria['nome']?></option>
+                <?php } ?>                
+                    
+                </select>
                 <textarea class="textarea-noticia"  placeholder="Conteudo da notícia" name="conteudo"></textarea>
                 <button id="btn-cadastrar" type="submit">Cadastrar</button>
             </form>
