@@ -1,6 +1,7 @@
 <?php
 
 require_once "app/Models/Noticia.php";
+require_once "app/Models/Categoria.php";
 
 class NoticiaController
 {
@@ -18,7 +19,7 @@ class NoticiaController
          
                 $noticia = new Noticia();
                 $noticia->setTitulo($titulo);
-                $noticia->setCategoria($categoria);
+                $noticia->setIdCategoria($categoria);
                 $noticia->setConteudo($conteudo);
                 //o metodo cadasra, cadastra os dados
                 if($noticia->cadastra()){
@@ -31,5 +32,15 @@ class NoticiaController
                 echo "<script>alert('Porfavor preencha todos os campos!')</script>";
             }
         }
+
+        
+    }
+
+    public function categoria()
+    {
+        $categoria = new Categoria();
+        
+        return $categoria->selectCategorias();
+        
     }
 }
