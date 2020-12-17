@@ -31,9 +31,6 @@ class Noticia extends Conexao
     //cadastra noticias no banco de dados
     public function cadastra()
     {
-        // idCategoria() retorna o id da categoria que sera inserido na tabela noticia
-        $this->idCategoria = $this->idCategoria();
-
         $query = "INSERT INTO noticia (titulo, idCategoria, conteudo) VALUES (:titulo, :idCategoria, :conteudo)";
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':titulo', $this->titulo);
@@ -49,32 +46,32 @@ class Noticia extends Conexao
         }
     }
 
-    //retorna o id da categoria
-    public function idCategoria()
-    {
-        $query = "SELECT * FROM categoria WHERE nome = :nome";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindValue(":nome", $this->categoria);
-        $stmt->execute();
+    // //retorna o id da categoria
+    // public function idCategoria()
+    // {
+    //     $query = "SELECT * FROM categoria WHERE nome = :nome";
+    //     $stmt = $this->db->prepare($query);
+    //     $stmt->bindValue(":nome", $this->categoria);
+    //     $stmt->execute();
 
-        //verifica se a categoria digitada já existe
-        //se existir retorna seu id
-        if($stmt->rowCount()){
-            $categoria = $stmt->fetch();
-            $id        = $categoria['id'];
-            return $id;
+    //     //verifica se a categoria digitada já existe
+    //     //se existir retorna seu id
+    //     if($stmt->rowCount()){
+    //         $categoria = $stmt->fetch();
+    //         $id        = $categoria['id'];
+    //         return $id;
         
-        //se a categoria n exite, cadastra no banco e retorna seu id
-        }else{
-            $query = "INSERT INTO categoria (nome) VALUES (:nome)";
-            $stmt = $this->db->prepare($query);
-            $stmt->bindValue(":nome", $this->categoria);
-            $stmt->execute();
-            //lastInsertId() retorna o id do dado que acabou de ser inserido no banco de dados
-            $id = $this->db->lastInsertId();
-            return $id;
-        }
-    }
+    //     //se a categoria n exite, cadastra no banco e retorna seu id
+    //     }else{
+    //         $query = "INSERT INTO categoria (nome) VALUES (:nome)";
+    //         $stmt = $this->db->prepare($query);
+    //         $stmt->bindValue(":nome", $this->categoria);
+    //         $stmt->execute();
+    //         //lastInsertId() retorna o id do dado que acabou de ser inserido no banco de dados
+    //         $id = $this->db->lastInsertId();
+    //         return $id;
+    //     }
+    // }
     //setrs
     public function setId($id)
     {
@@ -86,9 +83,9 @@ class Noticia extends Conexao
         $this->titulo = $titulo;
     }
 
-    public function setCategoria($categoria)
+    public function setIdCategoria($categoria)
     {
-        $this->categoria = $categoria;
+        $this->idCategoria = $categoria;
     }
 
     public function setConteudo($conteudo)
