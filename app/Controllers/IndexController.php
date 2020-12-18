@@ -1,11 +1,9 @@
 <?php
 require_once "App/Models/Noticia.php";  
 
-class IndexController
-{   
-    public function controNoticias()
-    {
-        $noticia = new Noticia();
+        $noticias = null;
+
+        $n = new Noticia();
 
         //se existir o metodo get busca
         if(isset($_GET['busca'])) {
@@ -14,17 +12,17 @@ class IndexController
 
             //verifica se está vazio
             if(!empty($pesquisa)){
-                $noticia->setTitulo($pesquisa);
-                return $noticias = $noticia->pesquisa();
+                $n->setTitulo($pesquisa);
+                $noticias = $n->pesquisa();
 
             }else{
                 echo"<script> alert('Porfavor, preencha o campo!') </script>";
-                return $noticia->selectNoticias();
+                $noticias = $n->selectNoticias();
             }
         
         // caso não exita o get busca retorna todas as noticias do banco de dados
         }else{
-            return $noticia->selectNoticias();
+            $noticias = $n->selectNoticias();
         }
-    }
-}
+    
+
