@@ -1,7 +1,6 @@
 <?php
     require_once "app/Controllers/IndexController.php";
-    $indexController = new IndexController();
-    $noticias = $indexController->controNoticias();
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,9 +23,9 @@
             <?=$noticia['conteudo']?>
             </p>
             <div class="btn-container">
-                <button class="btn-acessar">
+                <a class="btn-acessar" href="editar-noticia.php?id=<?=$noticia['id']?>">
                     Acessar
-                </button>
+                </a>
             </div>
         </div>
         
