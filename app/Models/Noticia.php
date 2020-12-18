@@ -18,6 +18,15 @@ class Noticia extends Conexao
         
     }
 
+    public function selectUniNoticia()
+    {
+        $query = "SELECT * FROM noticia WHERE id = :id";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindValue(":id", $this->id);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
     //pesquisa noticias no banco de dados
     public function pesquisa()
     {
@@ -46,33 +55,27 @@ class Noticia extends Conexao
         }
     }
 
-    // //retorna o id da categoria
-    // public function idCategoria()
-    // {
-    //     $query = "SELECT * FROM categoria WHERE nome = :nome";
-    //     $stmt = $this->db->prepare($query);
-    //     $stmt->bindValue(":nome", $this->categoria);
-    //     $stmt->execute();
+    public function atualiza()
+    {
+        $query = "UPDATE noticia SET titulo = :titulo, conteudo = :conteudo WHERE id = :id";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':titulo', $this->titulo);
+        $stmt->bindValue(':conteudo', $this->conteudo);
+        $stmt->execute();
 
-    //     //verifica se a categoria digitada já existe
-    //     //se existir retorna seu id
-    //     if($stmt->rowCount()){
-    //         $categoria = $stmt->fetch();
-    //         $id        = $categoria['id'];
-    //         return $id;
+    }
+
+    public function remove()
+    {
+        $query = "DELETE FROM noticia WHERE id = :id";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindValue(':id', $this->id);
+        $stmt->execute();
+
         
-    //     //se a categoria n exite, cadastra no banco e retorna seu id
-    //     }else{
-    //         $query = "INSERT INTO categoria (nome) VALUES (:nome)";
-    //         $stmt = $this->db->prepare($query);
-    //         $stmt->bindValue(":nome", $this->categoria);
-    //         $stmt->execute();
-    //         //lastInsertId() retorna o id do dado que acabou de ser inserido no banco de dados
-    //         $id = $this->db->lastInsertId();
-    //         return $id;
-    //     }
-    // }
-    //setrs
+    }
+
     public function setId($id)
     {
         $this->id = $id;
