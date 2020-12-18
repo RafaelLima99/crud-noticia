@@ -27,11 +27,14 @@
 }
 
 .btn-acessar {
-  width: 70%; 
-  padding: 0.6em;
-  background: rgb(172, 171, 169);
-  border-radius: 0.5em;
-  border:none;  
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    width: 70%; 
+    padding: 0.6em;
+    background: rgb(172, 171, 169);
+    border-radius: 0.5em;
+    
 }
 
 .btn-acessar:hover {
