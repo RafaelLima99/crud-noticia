@@ -24,6 +24,13 @@ html body {
     margin-bottom: 2em;
 }
 
+.select-categoria {
+    width: 82%;
+    padding: 0.5em;
+    margin-bottom: 2em;
+
+}
+
 .textarea-noticia {
     width: 80%;
     padding: 0.5em;
@@ -57,6 +64,29 @@ html body {
 .btn-acessar:hover {
     background: black;
     color:white;
+}
+
+.btn-atualizar {
+    border:none;
+    color:white;
+    padding: 0.6em;
+    border-radius: 0.5em;
+    width: 15%;
+    background: rgb(172, 171, 169);
+}
+
+.btn-remover {
+    text-decoration: none;
+    border:none;
+    color:white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    width: 15%;
+    background: rgb(245, 3, 3);
+}
+
+#btn {
+    margin-top: 1em;
 }
 
 .container {
