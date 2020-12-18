@@ -3,10 +3,6 @@
 require_once "app/Models/Noticia.php";
 require_once "app/Models/Categoria.php";
 
-class NoticiaController
-{
-    public function cadastro()
-    {
         //verifica se exite os posts titulo, categoria e conteudo
         if(isset($_POST['titulo']) && isset($_POST['categoria']) && isset($_POST['conteudo'])){
 
@@ -34,13 +30,12 @@ class NoticiaController
         }
 
         
-    }
+    
 
-    public function categoria()
-    {
-        $categoria = new Categoria();
+    
+        $c = new Categoria();
         
-        return $categoria->selectCategorias();
+        $categorias = $c->selectCategorias();
         
-    }
-}
+    
+
