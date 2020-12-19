@@ -12,6 +12,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+        
     /* para o conteudo quebrar quando não houver mais espaço */
     flex-wrap: wrap;
 }
@@ -65,7 +66,7 @@ ul li a {
 
 #input-busca {
     border-radius: 1.5em;
-    padding: 0.4em;
+    padding: 0.4em 0.6em;
     border: none;
     margin: 0 1em 0 1em;
    
@@ -74,8 +75,8 @@ ul li a {
 /* rodape 
 -----------------------------------------*/
 footer {
+    padding: 1.5em;
     background:rgb(172, 171, 169);
-    height:10vh;
     margin-top: 1.5em;
     display: flex;
     align-items: center;
