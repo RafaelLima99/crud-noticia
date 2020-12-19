@@ -9,6 +9,7 @@ html body {
 /* contéudo 
 ------------------------------------------------------*/
 .conteudo {
+    box-shadow: 0 0 1em gray;
     background: white;
     grid-area:"card1";
     padding: 1em;
@@ -43,8 +44,8 @@ html body {
     padding: 0.5em;
     border-radius: 1em;
     border:none;
-    background:rgb(172, 171, 169);
-    width: 30%;
+    background:rgb(169, 169, 172);
+    width: 20%;
 }
 
 #btn-cadastrar:hover {
@@ -67,21 +68,34 @@ html body {
 }
 
 .btn-atualizar {
+    font-size: 0.9em;
     border:none;
     color:white;
-    padding: 0.6em;
+    padding: 0.5em;
     border-radius: 0.5em;
     width: 15%;
     background: rgb(172, 171, 169);
 }
 
+.btn-atualizar:hover {
+    transition: 1s;
+    background: rgb(10, 10, 10);
+}
+
 .btn-remover {
+    font-size: 0.9em;
     text-decoration: none;
     border:none;
     color:white;
     padding: 0.5em;
     border-radius: 0.5em;
     width: 15%;
+    background: rgb(235, 80, 80);
+    
+}
+
+.btn-remover:hover {
+    transition: 1s;
     background: rgb(245, 3, 3);
 }
 
