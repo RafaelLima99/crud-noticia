@@ -1,12 +1,13 @@
 /* contéudo 
 ------------------------------------------------------*/
 .card {
+    box-shadow: 5px 5px 5px gray;
     background: white;
     grid-area:"card1";
     padding: 1em;
     /* border: 1px solid red; */
     border-radius: 0.5em;
-    height: 50vh;
+    height: 20em;
     width:  20vw;
     /* para quebrar o texto dentro da div */
     word-wrap: break-word;
@@ -30,14 +31,16 @@
     color: black;
     text-align: center;
     text-decoration: none;
+    box-shadow: 2px 2px 2px gray;
     width: 70%; 
-    padding: 0.6em;
+    padding: 0.4em;
     background: rgb(172, 171, 169);
     border-radius: 0.5em;
     
 }
 
 .btn-acessar:hover {
+    transition: 1s;
     background: black;
     color:white;
 }
