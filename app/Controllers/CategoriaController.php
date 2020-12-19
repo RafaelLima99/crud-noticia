@@ -11,12 +11,12 @@ if(isset($_POST['titulo'])){
         $categoria->setNome($nome);
 
         if($categoria->cadastra()){
-            echo "cadastrou";
+            echo "<script>alert('cadastrado com sucesso')</script>";
         }else{
-            echo "erro";
+            echo "<script>alert('Erro ao cadastrar')</script>";
         }
 
     }else{
-        echo "vazio";
+        echo "<script>alert('Por favor, preencha o campo!')</script>";
     }
 }
