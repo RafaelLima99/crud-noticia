@@ -11,7 +11,7 @@
                 <li><a href="index.php">EXÍBIR NOTÍCIAS</a></li>
                 <li><a href="cadastro-categoria.php">CADASTRAR CATEGORIA</a></li>  
                 <form action="index.php" method="GET">
-                    <input id="input-busca" type="text" name="busca" placeholder="pesquisar por titulo">
+                    <input id="input-busca" type="text" name="busca" placeholder="Pesquisar por título">
                     <button id="btn-search"type="submit">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
