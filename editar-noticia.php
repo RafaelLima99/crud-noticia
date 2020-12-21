@@ -1,11 +1,9 @@
 <?php
     require_once "app/Controllers/EditarController.php";
-    
-    
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,11 +28,7 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div>
-            T   
-        </div>
-    </footer>
+<?php require_once "app/includes/footer.php";?> 
 </body>
 <script src="assets/js/navbar.js"></script>
 </html>
