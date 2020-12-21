@@ -2,6 +2,14 @@
 
 Crud com PHP e CSS responsivo sem framework.
 
+## Layout web
+
+![Web 1](https://github.com/RafaelLima99/assets/blob/main/crudnoticia-desk-01.png)
+
+![Web 2](https://github.com/RafaelLima99/assets/blob/main/crudnoticia-desk-02.png)
+
+![Web 3](https://github.com/RafaelLima99/assets/blob/main/crudnoticia-desk-03.png)
+
 # Tecnologias utilizadas
 ## Back end
 - PHP
