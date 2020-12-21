@@ -18,6 +18,7 @@ class Noticia extends Conexao
         
     }
 
+    //retorna uma notícia especifica
     public function selectUniNoticia()
     {
         $query = "SELECT * FROM noticia WHERE id = :id";
@@ -40,11 +41,13 @@ class Noticia extends Conexao
     //cadastra noticias no banco de dados
     public function cadastra()
     {
-        $query = "INSERT INTO noticia (titulo, idCategoria, conteudo) VALUES (:titulo, :idCategoria, :conteudo)";
+        $query = "INSERT INTO noticia (titulo, idCategoria, conteudo) 
+                  VALUES (:titulo, :idCategoria, :conteudo)";
+
         $stmt = $this->db->prepare($query);
-        $stmt->bindValue(':titulo', $this->titulo);
+        $stmt->bindValue(':titulo',      $this->titulo);
         $stmt->bindValue(':idCategoria', $this->idCategoria);
-        $stmt->bindValue(':conteudo', $this->conteudo);
+        $stmt->bindValue(':conteudo',    $this->conteudo);
         $stmt->execute();
 
         //verifica se foi cadastrado
@@ -59,8 +62,8 @@ class Noticia extends Conexao
     {
         $query = "UPDATE noticia SET titulo = :titulo, conteudo = :conteudo WHERE id = :id";
         $stmt = $this->db->prepare($query);
-        $stmt->bindValue(':id', $this->id);
-        $stmt->bindValue(':titulo', $this->titulo);
+        $stmt->bindValue(':id',       $this->id);
+        $stmt->bindValue(':titulo',   $this->titulo);
         $stmt->bindValue(':conteudo', $this->conteudo);
         $stmt->execute();
 
@@ -72,10 +75,9 @@ class Noticia extends Conexao
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':id', $this->id);
         $stmt->execute();
-
-        
     }
 
+    //seters
     public function setId($id)
     {
         $this->id = $id;
