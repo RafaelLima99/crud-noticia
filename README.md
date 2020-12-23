@@ -1,6 +1,6 @@
 # Sobre o projeto
 
-Crud com PHP e CSS responsivo sem framework.
+- Crud com PHP e CSS responsivo sem framework.
 
 ## Layout web
 
